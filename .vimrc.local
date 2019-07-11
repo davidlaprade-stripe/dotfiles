@@ -1,11 +1,12 @@
-set relativenumber
-
 " perform case insensitive search unless search contains capitol letter
 set ignorecase " needed for smartcase
 set smartcase
 
 " exit insert mode with 'jk'
 inoremap jk <Esc>
+
+" fuzzy file search using fzf with CTRL-P
+map <C-p> :FZF<cr>
 
 " emacs-like begining and end of line
 inoremap <C-a> <c-o>^
@@ -55,13 +56,6 @@ highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 set term=screen-256color
 
-" vim rspec configuration
-let g:rspec_command = "Dispatch zeus rspec {spec}"
-nnoremap <Leader>rt :call RunCurrentSpecFile()<CR>
-nnoremap <Leader>rs :call RunNearestSpec()<CR>
-nnoremap <Leader>rl :call RunLastSpec()<CR>
-nnoremap <Leader>ra :call RunAllSpecs()<CR>
-
 " smarter window resizing with CTRL-W-+/-
 if bufwinnr(1)
   map + <C-w>+
@@ -69,3 +63,5 @@ if bufwinnr(1)
 endif
 map <Leader>, <C-w>>
 map <Leader>. <C-w><
+
+let g:syntastic_ruby_checkers = ['rubocop']

@@ -1,10 +1,22 @@
 Plug 'rking/ag.vim'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'endel/vim-github-colorscheme'
-Plug 'kana/vim-textobj-user'
-Plug 'nelstrom/vim-textobj-rubyblock'
-Plug 'tpope/rbenv-ctags'
-Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-ragtag'
+" Plug 'kana/vim-textobj-user'
+" Plug 'nelstrom/vim-textobj-rubyblock'
+" Plug 'tpope/rbenv-ctags'
+" Plug 'tpope/vim-dispatch'
+" Plug 'tpope/vim-ragtag'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'elixir-lang/vim-elixir'
+" Plug 'elixir-lang/vim-elixir'
+
+" https://confluence.corp.stripe.com/display/PRODINFRA/Lint+Locally+in+IDEs#LintLocallyinIDEs-Vim
+" Plug 'w0rp/ale'
+
+" PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run the install script
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+" For Sorbet Language Server
+Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
+let g:LanguageClient_serverCommands = {
+   \ 'ruby': ['pay', 'exec', 'scripts/bin/typecheck', '--lsp'],
+   \ }
