@@ -28,6 +28,9 @@ inoremap <C-r> <esc><C-r>i
 nmap <CR> o<esc>
 nmap <Leader><CR> O<esc>
 
+" refresh the page
+nmap <Leader>rd :redraw!<cr>
+
 " view place in page history
 map <Leader>j :jumps<cr>
 
