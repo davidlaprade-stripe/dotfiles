@@ -67,4 +67,4 @@ endif
 map <Leader>, <C-w>>
 map <Leader>. <C-w><
 
-let g:syntastic_ruby_checkers = ['rubocop']
+" let g:syntastic_ruby_checkers = ['rubocop']

@@ -34,7 +34,7 @@ call plug#begin('~/.vim/bundle')
 
 " Define bundles via Github repos
 Plug 'pbrisbin/vim-mkdir'
-Plug 'scrooloose/syntastic'
+" Plug 'scrooloose/syntastic'
 Plug 'slim-template/vim-slim'
 " Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-repeat'
