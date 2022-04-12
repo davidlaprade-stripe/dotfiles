@@ -8,15 +8,30 @@ Plug 'endel/vim-github-colorscheme'
 Plug 'christoomey/vim-tmux-navigator'
 " Plug 'elixir-lang/vim-elixir'
 
-" https://confluence.corp.stripe.com/display/PRODINFRA/Lint+Locally+in+IDEs#LintLocallyinIDEs-Vim
-" Plug 'w0rp/ale'
-
 " PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run the install script
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " For Sorbet Language Server
-Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
-let g:LanguageClient_serverCommands = {
-   \ 'ruby': ['pay', 'exec', 'scripts/bin/typecheck', '--lsp'],
-   \ }
+" Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'make release'}
+" let g:LanguageClient_serverCommands = {
+"    \ 'ruby': ['pay', 'exec', 'scripts/bin/typecheck', '--lsp'],
+"    \ }
+"
+" let g:LanguageClient_selectionUI_autoOpen = 1
+" let g:LanguageClient_selectionUI = 'quickfix'
+" let g:LanguageClient_diagnosticsList = 'Location'
+" let g:LanguageClient_loggingLevel = 'DEBUG'
+" let g:LanguageClient_loggingFile= expand('~/.vim/LanguageClient.log')
+
+" nnoremap <silent> <leader>p :call LanguageClient#textDocument_definition()<CR>
+
+" https://confluence.corp.stripe.com/display/PRODINFRA/Lint+Locally+in+IDEs#LintLocallyinIDEs-Vim
+" Plug 'w0rp/ale'
+
+" https://confluence.corp.stripe.com/display/PRODINFRA/Developing+at+Stripe+with+Vim#DevelopingatStripewithVim-JavaScriptLinting
+" let g:ale_fixers = {
+" \  'javascript': ['eslint'],
+" \}
+" let g:ale_fix_on_save = 1
+" let g:ale_javascript_eslint_executable = 'eslint_d'
